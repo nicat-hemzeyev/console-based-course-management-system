@@ -1,12 +1,25 @@
 package coursemanagement.commond;
 
 public class User {
-   private String Id;
-   private String name;
-   private String surname;
-   private String email;
-   private String getRole(){
-        return "USER";
+    private int Id;
+    private String name;
+    private String surname;
+    private String email;
+    private static int idCounter = 1;
+
+    public User(String name, String surname, String email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.Id = idCounter++;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getName() {
@@ -17,13 +30,6 @@ public class User {
         this.name = name;
     }
 
-    public String getId() {
-        return Id;
-    }
-
-    public void setId(String id) {
-        Id = id;
-    }
 
     public String getSurname() {
         return surname;
@@ -40,4 +46,4 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    }
+}
