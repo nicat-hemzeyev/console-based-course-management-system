@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class MainMenu {
     public static void mainMenu(){
         System.out.println(
-                "     ESAS SEHIFE\n"+
-                "---------------------\n"+
+                "---ESAS MENU---\n" +
                 "Seciminizi edin:\n"+
                 "1.Kurs menusu\n"+
                 "2.Muellim menusu\n"+
@@ -28,7 +27,7 @@ public class MainMenu {
               StudentMenu.studentMenu();
                 break;
             default:
-                System.out.println("Secim yanlisdir");
+                System.out.println("Sechim yanlisdir");
 
         }
 

@@ -6,9 +6,6 @@ import coursemanagement.student.entity.Student;
 import java.util.Scanner;
 
 public class StudentService {
-    public static void main(String[] args) {
-        newStudent();
-    }
 
     public static void newStudent() {
         System.out.println("Nece telebe qeydiyyatdan kecirmek isteyirsiz: ");
@@ -34,6 +31,7 @@ public class StudentService {
             newStudents[j] = requireAndCreate();
         }
     }
+
     public static Student requireAndCreate() {
         System.out.println("Telebenin adini daxil edin: ");
         String name = new Scanner(System.in).nextLine();
@@ -65,6 +63,7 @@ public class StudentService {
             student.setAge(new Scanner(System.in).nextInt());
         }
     }
+
     public static void delete() {
         Student[] students=Db.students;
         System.out.println("Nece nomreli telebeni silmek isteyirsiz:");
